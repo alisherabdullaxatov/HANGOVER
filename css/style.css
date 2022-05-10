@@ -1,0 +1,303 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.alisher{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/head.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ul-li{
+    font-size: 15px;
+    font-weight: 300;
+    
+}
+.middle{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.middle ul li{
+    font-size: 20px;
+    margin: 0 17px ;
+    color: gainsboro;
+}
+.middle ul li:nth-child(1){
+    list-style: none;
+}
+.bg-color{
+    background-color: #76D9E4;
+}
+.bg-color h1{
+    color:#3F4850;
+}
+.bg-color hr{
+    background-color: #3F4850;
+}
+.bt{
+    background-color: #414A52;
+    color: #76D9E4;
+    border: none;
+    border-radius: 0;
+    
+    
+}
+
+.img1{
+  
+    position: absolute;
+    bottom: 350px;
+    /* transform: translate(300px, 270px); */
+   /* display: none; */
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+    left: 320px;
+    top: 80px;
+ 
+    display: none;
+  
+    animation: animat 1.4s ease;
+    
+     
+    
+      
+
+    
+}
+
+@keyframes animat {
+    0%{
+        transform: scale(0);
+       border-radius: 0;
+    }
+    50%{
+        transform: scale(1.2);
+        border-radius: 50%;
+
+    }
+     100%{
+        transform: scale(1);
+        
+         border-radius: 100%;
+    } 
+}
+
+.img1.show{
+    display: block;
+    
+   
+    
+}
+
+.gallery img {
+    width: 400px;
+    height: 400px;
+
+  
+    display: flex;
+    justify-content: center;
+
+}
+.gallery{
+   
+   
+    position: relative;
+    
+}
+
+
+.gallery img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+#portfolio:checked ~ .portfolio-in-img .gallery img{
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+
+}
+#portfolio2:checked ~ .portfolio-in-img .gallery .web-desig{
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#portfolio2:checked ~ .portfolio-in-img .gallery .photography,
+#portfolio2:checked ~ .portfolio-in-img .gallery .product-design{
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+#portfolio3:checked ~ .portfolio-in-img .gallery .photograph{
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#portfolio3:checked ~ .portfolio-in-img .gallery .web-desig,
+#portfolio3:checked ~ .portfolio-in-img .gallery .product-design{
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+#portfolio4:checked ~ .portfolio-in-img .gallery .product-design{
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#portfolio4:checked ~ .portfolio-in-img .gallery .photography,
+#portfolio4:checked ~ .portfolio-in-img .gallery .web-desig{
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+.a input{
+    display: none;
+}
+.bg-color2{
+    background-color: #646B71;
+    padding: 100px 0;
+}
+.label-in label{
+    background-color: #414A52;
+    color: #50C7D3;
+    text-transform: uppercase;
+    font-weight: 400;
+
+}
+.label-in label:hover{
+ background-color: #50C7D3;
+ color: #414A52;
+}
+
+.gallery .img{
+    position: relative;
+    overflow: hidden;
+    transition-duration: 500ms;
+
+}
+.gallery .img::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.599);
+    opacity: 0;
+    transition-duration: 600ms;
+    
+}
+
+.gallery .img::after{
+    position: absolute;
+    content: "Project Title";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    left: 24%;
+    transform: translateY(50%);
+    font-size: 25px;
+    color: white;
+    opacity: 0;
+    transition-duration: 500ms;
+
+
+}
+.gallery .img:hover::after{
+    opacity: 1;
+    transform: translateY(40%);
+}
+.gallery .img:hover::before{
+   opacity: 1;
+}
+
+
+.gallery .img:hover{
+    transform: scale(1.1);
+}
+.bg-color3{
+    width: 100%;
+
+    background-color: #76D9E4;
+}
+.bg-color .h{
+    margin-bottom: 100px;
+}
+
+.bt2{
+    width: 200px;
+    background-color: #414A52;
+    color: #50C7D3;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 0;
+}
+.bt2:hover{
+color: white;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.icon i{
+
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background-color: black;
+}
+
+
+.footer{
+    width: 100%;
+    padding: 20px 0;
+    background-color: #343B42;
+    color: #667D8E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer p span{
+    color: #C2C5C7;
+}
+.q input{
+    outline: none;
+}
+
+
+.al{
+    position: relative;
+}
+.py{
+    padding-bottom: 100px;
+} 
+.n1, .n2{
+    display: flex;
+}
+.label-in {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
